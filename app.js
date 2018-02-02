@@ -115,11 +115,15 @@ IMPORTANT DETAIL! IMPORTANT DETAIL! IMPORTANT DETAIL!
 // Write your code here
 
 function sumArray(testArray){ //eslint-disable-line
-
+    let gradualSum = 0;
+    for (let i = 0; i < testArray.length; i++) {
+        gradualSum = sum(gradualSum,testArray[i])[0];
+    }
+    return [gradualSum, testArray + ' was passed in as an array of numbers, and ' + gradualSum + ' is their sum.'];
 }
 
 // Here is the test for sumArray(); uncomment it to run it
-// testSumArray();
+testSumArray();
 
 
 /////////////////////////////////////
